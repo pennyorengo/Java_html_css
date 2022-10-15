@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border box;
+    list-style: none;
+  }
+  
+  :root {
+    --color-primary: #0000ff;
+    --color-secondary: #ffc300;
+    --color-azure: #f0ffff;
+    --color-bluegray: #7393b3;
+    --color-cornflowerblue: #6495ed;
+    --color-darkblue: #00008b;
+    --color-cyan: #00ffff;
+    --color-lightblue: #add8e6;
+    --br-sm-2: 14px;
+    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
+  }
+  body {
+    background-color: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-azure);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+  }
+  
+  header {
+    height: 100vh;
+    color: var(--color-cyan);
+    overflow: hidden;
+  }
+  
+  section {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+  }
+  
+  .section {
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+    background-color: var(--color-primary);
+  }
+  
+  .sec1 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: var(--color-bluegrey);
+  }
+  
+  .sec2 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: var(--color-cornflowerblue);
+  }
+  
+  .sec3 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: var(--color-primary);
+  }
+  
+  .sec4 {
+    display: none;
+    transform: translateY(0) scale(1);
+    background-color: var(--color-secondary);
+  }
+  
+  .sec5 {
+    display: none;
+    transform: translateY(0) scale(1);
+  }
+  
+  .active {
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+    @keyframes scaleAnim {
+      0% {
+        transform: translateY(-100%) scaleY(0);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+  }
+  /** controls*/
+  .controls {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+  }
+    .active-btn {
+      background-color: var(--color-secondary) !important;
+      transition: all 0.5s ease-in-out;
+      background-color: var(--color-azure) !important;
+    }
+    .control {
+      padding: 1rem;
+      cursor: pointer;
+      background-color: var(--color-lightblue);
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0.7rem 0;
+      box-shadow: var (--box-shadow-1);
+        font-size: 1.8rem;
+      color: var(--color-secondary);
+        pointer-events: none;
+  }
+  
